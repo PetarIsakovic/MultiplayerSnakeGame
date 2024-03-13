@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href = "styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id = "background">
+        <div id = "snakeGrid">
+
+        </div>
+    </div>
+
+    <div id = "TitleScreen">
+        <h1 id = "title">Snake Fight</h1>
+        <input id = "usernameInput" placeholder="Username (E.x: Bob)"></input>
+        <div id = "snakeName">Bob</div>
+
+        <div id = "wrapper">
+            <img class = "arrow" style = "transform: scaleX(-1);" src = "right-arrow.png">
+            <div id = "previewSnake"></div>
+            <img class = "arrow" src = "right-arrow.png">
+        </div>
+
+        <div id = "JoinButton">Join</div>
+        <div id = "queueWait">Player List</div>
+    </div>
+
+    <div id = "gameOverScreen">
+        <div id = "stats">
+            <div id = "youRanInto">You Ran Into</div>
+            <div id = "ranIntoSnakeName">Bob</div>
+            <div id = "menu">Menu</div>
+        </div>
+    </div>
+    
+    
+        <script src = "https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+        <script src = "https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+        <script src = "https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+        
+        <script>
+            const firebaseConfig = {
+            apiKey: "AIzaSyBGaontjo_Rk4R-_2TnYSGK5wC6dup-e2E",
+            authDomain: "multiplayer-game-126a7.firebaseapp.com",
+            databaseURL: "https://multiplayer-game-126a7-default-rtdb.firebaseio.com",
+            projectId: "multiplayer-game-126a7",
+            storageBucket: "multiplayer-game-126a7.appspot.com",
+            messagingSenderId: "385018368260",
+            appId: "1:385018368260:web:2cdf09dec26b9c1e84c051"
+            };
+            firebase.initializeApp(firebaseConfig)
+        </script>
+    <script src = "app.js"></script>
+</body>
+</html>
