@@ -1,3 +1,5 @@
+(function() {
+
 let playerId;
 let playerRef;
 let allApplesRef;
@@ -608,3 +610,4 @@ function placeApple(){
         y: randomY
     })
 }
+})();
