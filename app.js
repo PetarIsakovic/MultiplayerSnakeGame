@@ -414,6 +414,7 @@ JoinButton.addEventListener('click', function () {
                     })
                 }
             })
+            firebase.auth().setPersistence(firebase.auth.Auth.Persistence.NONE);
             firebase.auth().signInAnonymously();
         }
         else {
