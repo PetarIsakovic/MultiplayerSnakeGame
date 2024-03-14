@@ -483,17 +483,17 @@
     document.addEventListener("keydown", (e) => {
         if (gameIsRunning) {
             if (players[playerId].inGame) {
-                if ((e.key == 'ArrowUp' || e.key == 'W') && moves[moves.length - 1] != "down") {
+                if ((e.key == 'ArrowUp' || e.key.toUpperCase() == 'W') && moves[moves.length - 1] != "down") {
                     moves.push("up");
                 }
-                if (e.key == 'ArrowDown' && moves[moves.length - 1] != "up") {
+                if ((e.key == 'ArrowDown' || e.key.toUpperCase() == 'S') && moves[moves.length - 1] != "up") {
                     moves.push("down");
                 }
-                if (e.key == 'ArrowLeft' && moves[moves.length - 1] != "right") {
+                if ((e.key == 'ArrowLeft' || e.key.toUpperCase() == 'A') && moves[moves.length - 1] != "right") {
                     moves.push("left");
 
                 }
-                if (e.key == 'ArrowRight' && moves[moves.length - 1] != "left") {
+                if ((e.key == 'ArrowRight'|| e.key.toUpperCase() == 'D') && moves[moves.length - 1] != "left") {
                     moves.push("right");
                 }
             }
